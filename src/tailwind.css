@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    body{
+        @apply dark:bg-black font-inter;
+    }
+    h1{
+        @apply text-[35px] lg:text-[66px] text-[#ffffff] font-black leading-[1.4];
+    }
+    h2{
+        @apply text-[28px] lg:text-[50px] text-black dark:text-[#ffffff] font-bold leading-7 lg:leading-[70px] pb-3 lg:pb-4;
+    }
+    h3{
+        @apply text-[20px] md:text-[24px] text-black dark:text-[#ffffff] font-bold leading-[34px];
+    }
+    h4{
+        @apply text-[16px] md:text-[18px] text-black dark:text-[#ffffff] font-bold leading-[28px];
+    }
+    p{
+        @apply text-[14px] md:text-[18px] text-black dark:text-[#ffffff] font-normal lg:leading-[30px] leading-6;
+    }
+    button{
+        @apply text-black text-[18px] leading-[28px] font-bold bg-white cursor-pointer;
+    }
+    section{
+        @apply pt-[90px] lg:pt-[150px];
+    }
+   li{
+    @apply text-black dark:text-white;
+   }
+}
+
+@layer components{
+    .container1{
+     max-width: 1302px;
+     margin: 0 auto;
+     padding: 0 16px 0 16px;
+    }
+    .container2{
+     max-width: 1202px;
+     margin: 0 auto;
+     padding: 0 16px 0 16px;
+    }
+    .banner-img{
+        background: url(../images/banner.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    .banner-img::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+       background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%,rgba(0, 0, 0, 0.6) 40%,rgba(0, 0, 0, 0) 60%,rgba(0, 0, 0, 0) 100%);
+        z-index: 1;
+    }
+    .play{
+         border-top: 24px solid transparent;
+        border-left: 24px solid black;
+        border-bottom:24px solid transparent;
+        
+    }
+    .my-shadow{
+        box-shadow: 0 0 10px 5px #ffffff;
+        animation-name: play;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        animation-direction: alternate;
+    }
+    @keyframes play {
+        0%{
+            box-shadow: 0 0 10px 5px #ffffff ;
+        }
+        50%{
+            box-shadow: 0 0 5px 2px #ffffff ;
+        }
+        100%{
+            box-shadow:  0 0 10px 5px #ffffff ;
+        }
+    }
+       
+   
+}

@@ -1,0 +1,8 @@
+
+#icon svg path{
+    stroke: black;
+}
+body.dark #icon svg path{
+    stroke: white;
+    
+}
